@@ -26,7 +26,7 @@ public class ItemDataTest {
 
 	@Before
 	public void setUp() throws Exception {
-		// 在url中指定core名称：taotao
+		// 在url中指定core名称：taotao 测试yxg
 		String url = "http://solr.yxg.com/yxg";
 		HttpSolrServer httpSolrServer = new HttpSolrServer(url); // 定义solr的server
 		httpSolrServer.setParser(new XMLResponseParser()); // 设置响应解析器
