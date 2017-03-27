@@ -2,7 +2,7 @@ package cn.itcast.solrj.pojo;
 
 import java.util.Date;
 
-//addase
+//增加第一次
 public abstract class BasePojo {
 
 	private Date created;
