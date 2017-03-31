@@ -2,7 +2,7 @@ package cn.itcast.solrj.pojo;
 
 import java.util.Date;
 
-//修改三次123
+//修改三次23.55
 public abstract class BasePojo {
 
 	private Date created;
