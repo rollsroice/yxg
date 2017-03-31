@@ -2,7 +2,7 @@ package cn.itcast.solrj.pojo;
 
 import java.util.Date;
 
-//增加第一次111密码23.19
+//增加第一次111密码23.27
 public abstract class BasePojo {
 
 	private Date created;
