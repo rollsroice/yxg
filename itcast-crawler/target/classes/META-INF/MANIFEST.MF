@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Built-By: Administrator
+Build-Jdk: 1.6.0_13
+Class-Path: lib/httpclient-4.3.5.jar lib/httpcore-4.3.2.jar lib/common
+ s-logging-1.1.3.jar lib/commons-codec-1.6.jar lib/slf4j-log4j12-1.7.7
+ .jar lib/slf4j-api-1.7.7.jar lib/log4j-1.2.17.jar lib/jsoup-1.8.1.jar
+  lib/mybatis-3.2.8.jar lib/commons-io-1.3.2.jar lib/commons-lang3-3.3
+ .2.jar lib/lucene-core-4.10.2.jar lib/lucene-queryparser-4.10.2.jar l
+ ib/lucene-queries-4.10.2.jar lib/lucene-sandbox-4.10.2.jar lib/lucene
+ -analyzers-common-4.10.2.jar lib/mysql-connector-java-5.1.34.jar lib/
+ lucene-highlighter-4.10.2.jar lib/lucene-memory-4.10.2.jar lib/spring
+ -context-4.1.3.RELEASE.jar lib/spring-aop-4.1.3.RELEASE.jar lib/aopal
+ liance-1.0.jar lib/spring-beans-4.1.3.RELEASE.jar lib/spring-core-4.1
+ .3.RELEASE.jar lib/spring-expression-4.1.3.RELEASE.jar lib/druid-1.0.
+ 11.jar lib/mybatis-spring-1.2.2.jar lib/spring-jdbc-4.1.3.RELEASE.jar
+  lib/spring-tx-4.1.3.RELEASE.jar lib/jackson-databind-2.4.2.jar lib/j
+ ackson-annotations-2.4.0.jar lib/jackson-core-2.4.2.jar lib/junit-4.1
+ 2.jar lib/hamcrest-core-1.3.jar
+Specification-Title: itcast-crawler
+Specification-Version: 1.0.0-SNAPSHOT
+Implementation-Title: itcast-crawler
+Implementation-Version: 1.0.0-SNAPSHOT
+Implementation-Vendor-Id: cn.itcast.crawler
+Main-Class: cn.itcast.crawler.Main
+Created-By: Maven Integration for Eclipse
+
