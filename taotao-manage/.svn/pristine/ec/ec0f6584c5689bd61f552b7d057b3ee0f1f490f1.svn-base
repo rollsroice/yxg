@@ -1,0 +1,59 @@
+package com.taotao.manage.service;
+
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.taotao.manage.mapper.ItemMapper;
+import com.taotao.manage.pojo.Item;
+
+@Service
+public class ItemService extends BaseService<Item> {
+
+    @Autowired
+    private ItemMapper itemMapper;
+    
+    @Autowired
+    private ItemDescService itemDescService;
+    
+    public PageInfo<Item> queryItemList(Integer page, Integer rows) {
+        PageHelper.startPage(page, rows);
+        return new PageInfo<Item>(this.itemMapper.queryItemListOrderByUpdated());
+    }
+
+    public Integer saveItem(Item item, String desc) {
+        // 设置初始化数据
+        item.setCreated(new Date());
+        item.setUpdated(item.getCreated());
+        item.setStatus(1);
+
+        // 强制设置id为null，安全角度
+        item.setId(null);
+        Integer count = 0;
+        count = super.save(item);
+
+        //完成商品描述的新增
+        count = this.itemDescService.saveItemDesc(item.getId(),desc);
+        return count;
+    }
+
+    public Integer updateItem(Item item, String desc) {
+        //数据限制
+        item.setCreated(null);
+        
+        //更新数据
+        item.setUpdated(new Date());
+        
+        Integer count = 0;
+        count = super.updateSelective(item);
+        
+        //更新ItemDesc数据
+        count = this.itemDescService.updateItemDesc(item.getId(),desc);
+        
+        return count;
+    }
+
+}
